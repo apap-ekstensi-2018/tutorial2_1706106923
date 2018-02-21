@@ -30,9 +30,9 @@ public class PageController {
 			if(name.isPresent()) {
 				model.addAttribute("name",name.get());
 			}else {
-				model.addAttribute("apap");
+				model.addAttribute("name","apap");
 			}
 			return "greeting";
 		}
-
+		
 }
