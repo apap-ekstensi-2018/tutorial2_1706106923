@@ -35,4 +35,23 @@ public class PageController {
 			return "greeting";
 		}
 		
+		@RequestMapping("/greeting")
+		public String greeting(@RequestParam(value="name",required=false,defaultValue="dunia") String name, Model model)
+		{
+			model.addAttribute("name",name);
+			return "greeting";
+		}
+		
+		@RequestMapping("/perkalian")
+		public String getitem(
+				@RequestParam(value="a",defaultValue="0") Integer aa,
+				@RequestParam(value="b",defaultValue="0") Integer bb,
+				Model model)
+		{
+				model.addAttribute("aa",aa);
+				model.addAttribute("bb",bb);
+				model.addAttribute("cc",aa*bb);
+		    return "perkalian";
+		}
+
 }
