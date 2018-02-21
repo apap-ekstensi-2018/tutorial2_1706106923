@@ -14,7 +14,7 @@ public class PageController {
 			return "hello";
 		}
 		
-		@RequestMapping("/greeting")
+		@RequestMapping("/hello/greeting")
 		public String greeting(@RequestParam(value="name") String name, Model model)
 		{
 			model.addAttribute("name",name);
